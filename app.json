@@ -1,0 +1,73 @@
+{
+    "name": "بوت تشغيل الفيديوهات والاغاني في المكالمات",
+    "description": "البوت مقدم من سورس @BLACK_TEAM_4",
+    "repository": "الــمـطـور @UUOUOU_7",
+    "logo": "hhttps://telegra.ph/file/af5c9c07a64c280497ac4.jpg",
+    "stack": "container",
+    "keywords": [
+      "telegram",
+      "voicechat",
+      "bot",
+      "video",
+      "player",
+      "python",
+      "pyrogram",
+      "pytgcalls",
+      "videoplayer"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "هنا تخلي الايبي ايدي تحصله من my.telegram.org/apps",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "هنا تخلي الايبي هاش my.telegram.org/apps",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "هنا حط التوكن بوت من @Botfather",
+        "required": true
+      },
+      "SESSION_STRING": {
+        "description": "هنا تخلي الكود سترنك تحصله من خلال @genStr_robot",
+        "required": true
+      },
+      "SUDO_USERS": {
+        "description": "ايدي حسابك حتى تكدر تستعمل الاوامر",
+        "required": true
+      },
+      "ASSISTANT_NAME": {
+        "description": "معرف حساب المساعد بدون @.",
+        "required": true
+      },
+      "SUPPORT_GROUP": {
+        "description": "معرف جروبك بدون @",
+        "required": false,
+        "value": "Jepthon"
+      },     
+      "UPDATES_CHANNEL": {
+        "description": "معرف قناتك بدون @",
+        "required": false,
+        "value": "Jepthon"
+      },
+      "REPLY_MESSAGE": {
+        "description": "عوفه لاتلعب",
+        "value": ".",
+        "required": false
+      }
+    },
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "https://github.com/YAF3Y/sors/heroku-buildpack-ffmpeg-latest"
+      },
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
